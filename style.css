@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7%;    
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container p{
+    margin-top: 40px;
+    margin-bottom: 4px;
+}
+
+.box-1{
+    border: 3px solid black;
+    background: rgb(153, 153, 153);      
+}
+
+.chicken{
+    background: rgb(213, 152, 152);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100px;
+    float: right;       
+}
+
+
+.box-2{
+    border: 3px solid black;
+    background: rgb(153, 153, 153);
+}
+
+.beef{
+    background: rgb(193, 69, 67);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100px;
+    float: right; 
+}
+
+.box-3{
+    border: 3px solid black;
+    background: rgb(153, 153, 153);
+}
+
+.sushi{
+    background: rgb(229, 209, 152);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100px;
+    float: right;
+}
+
+
+/* -------media query----------- */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box-3{
+       grid-column: 1/-1;
+    }
+}
+
+@media (max-width: 767px) {
+      
+    .container{
+        width: 65%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box-2{
+        margin-top: 7%;
+    }
+
+    .box-3{
+        margin-top: 7%;
+    }
+
+}
